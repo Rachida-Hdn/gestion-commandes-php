@@ -1,0 +1,357 @@
+/* ============================================
+   style.css
+   Design inspiré de la maquette : navbar navy,
+   cartes blanches, badges de statut colorés.
+   ============================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #eef1f8;
+    color: #1f2937;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    background-color: #0f1c3d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+}
+
+.navbar .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.navbar .brand .icon-circle {
+    background-color: #2563eb;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar .nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 4px;
+}
+
+.navbar .nav-links a.active {
+    color: #fff;
+    border-bottom: 2px solid #3b82f6;
+}
+
+.navbar .nav-links a:hover {
+    color: #fff;
+}
+
+/* ---------- LAYOUT ---------- */
+.page-wrapper {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(15, 28, 61, 0.06);
+    padding: 28px 32px;
+    margin-bottom: 24px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.card-title-block {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.card-title-block .icon-badge {
+    background-color: #e0e9ff;
+    color: #2563eb;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title-block h1 {
+    font-size: 20px;
+    color: #111827;
+}
+
+.card-title-block p {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+/* ---------- BOUTONS ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    background-color: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-sm {
+    padding: 7px 14px;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+.btn-delete {
+    background-color: #ef4444;
+}
+
+.btn-delete:hover {
+    background-color: #dc2626;
+}
+
+.btn-outline {
+    background-color: #fff;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.btn-outline:hover {
+    background-color: #f3f4f6;
+}
+
+/* ---------- TABLEAU ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #f8fafc;
+    color: #6b7280;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody td {
+    padding: 16px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+tbody tr:hover {
+    background-color: #f9fafc;
+}
+
+.numero {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.total {
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* ---------- BADGES DE STATUT ---------- */
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-attente {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.badge-validee {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-livree {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge-annulee {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* ---------- FORMULAIRES ---------- */
+form label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #374151;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111827;
+    background-color: #f9fafb;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #2563eb;
+    background-color: #fff;
+}
+
+/* ---------- MESSAGE DE SUCCÈS ---------- */
+.message-succes {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ---------- LIEN RETOUR ---------- */
+.retour {
+    display: inline-block;
+    margin-top: 18px;
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.retour:hover {
+    text-decoration: underline;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background-color: #eef1f8;
+    border-top: 1px solid #e2e8f0;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer .footer-brand .icon-circle {
+    background-color: #2563eb;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footer-brand-text p:first-child {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.footer .footer-brand-text p:last-child {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.footer .footer-copy {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 30px;
+    color: #9ca3af;
+}
+
+.confirm-box p {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.confirm-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
